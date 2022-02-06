@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { ProductsService } from './services/products.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'ecommerce-website-replica';
+  constructor(private productServise: ProductsService) {
+    productServise.bestsellersTvList();
+  }
 }
