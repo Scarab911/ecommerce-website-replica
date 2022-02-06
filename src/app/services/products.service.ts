@@ -7,10 +7,9 @@ import { AmazonItem } from '../models/item';
   providedIn: 'root',
 })
 export class ProductsService {
-  public bestSellersList: any;
-  constructor(private http: HttpClient) {
-    this.bestSellersList = [];
-  }
+  // public bestSellersList: any;
+
+  constructor(private http: HttpClient) {}
 
   public bestsellersTvList(): Observable<any> {
     //end point host:
@@ -29,12 +28,6 @@ export class ProductsService {
     this.http.get(host);
 
     //Get request
-    this.http.get<any>(host, { headers: headers }).subscribe((resp) => {
-      console.log(resp.results);
-      this.bestSellersList = resp.results;
-      console.log(this.bestSellersList[0]);
-    });
-
-    return this.bestSellersList;
+    return this.http.get<any>(host, { headers: headers });
   }
 }

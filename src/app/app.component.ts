@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ProductsService } from './services/products.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,4 @@ import { ProductsService } from './services/products.service';
 })
 export class AppComponent {
   title = 'ecommerce-website-replica';
-  constructor(private productServise: ProductsService) {
-    productServise.bestsellersTvList();
-  }
 }

@@ -1,1 +1,5 @@
-<p>home-page works!</p>
+<div class="container">
+  <ng-container *ngFor="let product of listOfProducts">
+    <app-product [product]="product"></app-product>
+  </ng-container>
+</div>

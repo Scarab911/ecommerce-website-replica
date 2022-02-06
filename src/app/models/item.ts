@@ -7,8 +7,4 @@ export interface AmazonItem {
   rank: number;
   reviews: any;
   title: string;
-  source: any;
-  operator: any;
-  lif: any;
-  subscribe: any;
 }
