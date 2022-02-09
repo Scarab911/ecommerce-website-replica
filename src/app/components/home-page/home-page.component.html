@@ -1,5 +1,10 @@
-<div class="container">
-  <ng-container *ngFor="let product of listOfProducts">
-    <app-product [product]="product"></app-product>
-  </ng-container>
+<div>
+  <button (click)="getAllProducts()">Get products</button>
+  <button (click)="ProductDetails()">Get product info</button>
+  <div class="container">
+    <ng-container *ngFor="let product of listOfProducts">
+      <app-product [routerLink]="['product']"
+        [product]="product"></app-product>
+    </ng-container>
+  </div>
 </div>

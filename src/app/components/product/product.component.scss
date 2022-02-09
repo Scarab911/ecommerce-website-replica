@@ -1,16 +1,23 @@
 .product {
   display: flex;
+  height: 435px;
   flex-direction: column;
-  background-color: aquamarine;
   border-radius: 15px;
-  border: 1px solid green;
+  border: 1px solid lightcoral;
   padding: 5px;
   gap: 5px;
   justify-content: center;
   align-items: center;
+  color: black;
+  font-weight: bolder;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
 
   .image {
-    height: 200px;
+    height: 300px;
+    width: 300px;
+    background-color: darkblue;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
